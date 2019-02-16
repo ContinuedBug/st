@@ -83,41 +83,73 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 unsigned int alpha = 0xa9;
-
-
-
 static const char *colorname[] = {
-	"#000000", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#8ec07c",
-	"#d79921",
-	"#ffffff",
-	"#689d6a",
-	"#a89984",
-	"#928374", /* 6 */
-	"#F3F3F3", /* 7 files */
-	"#8a2ec8", /* 8 exec */
-	"#fabd2f",
-	"#cc241d",
-	"#83a598",
-	"#C95017", /* 12 Folder */
-	"#d3869b",
-	"#7A28CB", /* 14 slink */
-	"#F3F3F3",
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#f7f7f7",   /* 256 -> cursor bg */
-	"white",   /* 257 -> fg */
+		"#000000", /* hard contrast: #1d2021 / soft contrast: #32302f */
+		"#cc241d",
+		"#1e90ff",
+		"#d79921",
+		"#C95017",
+		"#b16286",
+		"#adff2f",
+		"#a89984",
+		"#f3f3f3",
+		"#fb4934",
+		"#b8bb26",
+		"#83a598",
+		"#f95017",
+		"#d3869b",
+		"#8ec07c",
+		"#F3F3F3",
+		[255] = 0, /* more colors can be added after 255 to use with DefaultXX */
+		"black",   /* 256 -> bg */
+		"white",   /* 257 -> fg */
+};
+
+
+
+ResourcePref resources[] = {
+		{ "font",         STRING,  &font  },
+		{ "color0",       STRING,  &colorname[0]  },
+		{ "color1",       STRING,  &colorname[1]  },
+		{ "color2",       STRING,  &colorname[2]  },
+		{ "color3",       STRING,  &colorname[3]  },
+		{ "color4",       STRING,  &colorname[4]  },
+		{ "color5",       STRING,  &colorname[5]  },
+		{ "color6",       STRING,  &colorname[6]  },
+		{ "color7",       STRING,  &colorname[7]  },
+		{ "color8",       STRING,  &colorname[8]  },
+		{ "color9",       STRING,  &colorname[9]  },
+		{ "color10",      STRING,  &colorname[10]  },
+		{ "color11",      STRING,  &colorname[11]  },
+		{ "color12",      STRING,  &colorname[12]  },
+		{ "color13",      STRING,  &colorname[13]  },
+		{ "color14",      STRING,  &colorname[14]  },
+		{ "color15",      STRING,  &colorname[15]  },
+		{"background",    STRING,  &colorname[256] },
+		{ "foreground",   STRING,  &colorname[257]  },
+		{ "termname",     STRING,  &termname  },
+		{ "shell",        STRING,  &shell  },
+		{ "xfps",         INTEGER, &xfps  },
+		{ "actionfps",    INTEGER, &actionfps  },
+		{ "blinktimeout", INTEGER, &blinktimeout  },
+		{ "bellvolume",   INTEGER, &bellvolume  },
+		{ "tabspaces",    INTEGER, &tabspaces  },
+		{ "cwscale",      FLOAT,   &cwscale  },
+		{ "chscale",      FLOAT,   &chscale  },
+		{ "alpha",      INTEGER,   &alpha  },
 
 };
+
+
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
+unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 0;
 
 /*
  * Default shape of cursor

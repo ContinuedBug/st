@@ -84,25 +84,25 @@ unsigned int tabspaces = 8;
 
 unsigned int alpha = 0xa9;
 static const char *colorname[] = {
-		"#000000", /* hard contrast: #1d2021 / soft contrast: #32302f */
-		"#cc241d",
-		"#1e90ff",
-		"#d79921",
-		"#C95017",
-		"#b16286",
-		"#adff2f",
-		"#a89984",
-		"#f3f3f3",
-		"#fb4934",
-		"#b8bb26",
-		"#83a598",
-		"#f95017",
-		"#d3869b",
-		"#8ec07c",
-		"#F3F3F3",
-		[255] = 0, /* more colors can be added after 255 to use with DefaultXX */
-		"black",   /* 256 -> bg */
-		"white",   /* 257 -> fg */
+		"#1b1918",
+		"#f22c40",
+		"#5ab738",
+		"#d5911a",
+		"#407ee7",
+		"#6666ea",
+		"#00ad9c",
+		"#a8a19f",
+		"#766e6b",
+		"#f22c40",
+		"#5ab738",
+		"#d5911a",
+		"#407ee7",
+		"#6666ea",
+		"#00ad9c",
+		"#f1efee",
+		[255] = 0,
+		"#f1efee",
+		"#68715e"
 };
 
 

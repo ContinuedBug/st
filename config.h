@@ -82,9 +82,10 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-unsigned int alpha = 0xa9;
+/* unsigned int alpha = 0xa9; */
+unsigned int alpha = 0xff;
 static const char *colorname[] = {
-        "#181818",
+        "#121212",
         "#AB4642",
         "#A1B56C",
         "#F7CA88",

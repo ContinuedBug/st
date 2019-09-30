@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "mono:pixelsize=16:antialias=true:autohint=true:style=Regular"; // added style:Regular due a bug with the go fonts and fish shell
 static int borderpx = 1;
 
 /*
